@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fayaz K | Data Engineer Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -11,20 +11,57 @@
       font-family: 'Inter', sans-serif;
       background-color: #f5f7fa;
       color: #2e2e2e;
-      scroll-behavior: smooth;
+      animation: fadeInBody 1.2s ease-in;
+    }
+
+    @keyframes fadeInBody {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    section {
+      animation: fadeInSection 1s ease-in;
+    }
+
+    @keyframes fadeInSection {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header, footer {
+      animation: slideFadeIn 0.9s ease-in;
+    }
+
+    @keyframes slideFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     header {
-      background-color: #e0e0e0;
+      background-color: #d6e0f0;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 2rem 1rem;
-      border-bottom: 4px solid #b0b0b0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      animation: fadeInDown 0.9s ease-in;
+      border-bottom: 4px solid #9bb1d4;
     }
 
     .header-content {
@@ -64,13 +101,10 @@
 
     section {
       margin-bottom: 2.5rem;
-      padding: 2rem 1.5rem;
+      padding: 1.5rem;
       background-color: #ffffff;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 0.8s ease forwards;
     }
 
     h2 {
@@ -108,12 +142,11 @@
     }
 
     footer {
-      background-color: #e0e0e0;
+      background-color: #d6e0f0;
       color: #333;
       text-align: center;
       padding: 1.5rem 1rem;
-      border-top: 4px solid #b0b0b0;
-      animation: fadeInUp 1s ease-in;
+      border-top: 4px solid #9bb1d4;
     }
 
     .social-links {
@@ -135,24 +168,6 @@
       color: #1e70bf;
       text-decoration: none;
     }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
   </style>
 </head>
 <body>
@@ -172,11 +187,7 @@
   <section>
     <h2>Summary</h2>
     <p>
-      Experienced Data Engineer with over 5 years of hands-on expertise in building cloud-native data solutions across healthcare, telecom, and airline sectors.
-      Specialized in ETL pipeline development, cloud data warehousing, and real-time data streaming using tools like PySpark, dbt, Snowflake, and Airflow on AWS and Azure platforms.
-      Proficient in both batch and streaming architecture, ensuring robust data quality and automation.
-      Adept at cross-functional collaboration to translate business goals into scalable data infrastructure.
-      Proven ability to lead cloud migrations and performance tuning projects. Passionate about delivering actionable insights and driving efficiency.
+      Experienced Data Engineer with over 5 years of hands-on expertise in building cloud-native data solutions across healthcare, telecom, and airline sectors. Specialized in ETL pipeline development, cloud data warehousing, and real-time data streaming using tools like PySpark, dbt, Snowflake, and Airflow on AWS and Azure platforms. Proficient in both batch and streaming architecture, ensuring robust data quality and automation. Adept at cross-functional collaboration to translate business goals into scalable data infrastructure. Proven ability to lead cloud migrations and performance tuning projects. Passionate about delivering actionable insights and driving efficiency.
     </p>
   </section>
 
@@ -191,16 +202,57 @@
       </div>
     </div>
   </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <ul>
+      <li><strong>Big Data:</strong> Hadoop, Spark, Flink, Hive, HBase</li>
+      <li><strong>Streaming:</strong> Kafka, Storm, Flink, Beam</li>
+      <li><strong>Cloud:</strong> AWS (S3, Redshift, EMR, Lambda), GCP (BigQuery, Dataflow), Azure (ADF, Synapse, Databricks)</li>
+      <li><strong>ETL:</strong> NiFi, Talend, Informatica, Glue, Data Factory</li>
+      <li><strong>Databases:</strong> MySQL, PostgreSQL, Oracle, SQL Server, MongoDB</li>
+      <li><strong>DevOps:</strong> Jenkins, GitHub Actions, Terraform, Docker, Kubernetes</li>
+      <li><strong>Languages:</strong> Python, SQL, Java, Scala</li>
+      <li><strong>Monitoring:</strong> Splunk, Grafana</li>
+      <li><strong>Visualization:</strong> Power BI, Tableau, Looker</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <ul>
+      <li>Cloud Data Lakehouse for Airlines using Databricks and Snowflake – Delivered 40% performance boost.</li>
+      <li>Real-Time Claims Processing Pipeline on AWS – Enabled fraud analytics with Kafka + EMR.</li>
+      <li>Healthcare Data Warehouse Migration – Achieved full HIPAA compliance and 30% faster reporting.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Achievements</h2>
+    <ul>
+      <li>Reduced ETL execution time by 50% at T-Mobile through pipeline optimization.</li>
+      <li>Received internal award for leadership in cloud migration at American Airlines.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/users/fayazkulumala-1688/credentials/28942792a53e1c01?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank">Azure Data Engineer Associate</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/users/fayazkulumala-1688/credentials/f7d99231765f0980?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank">Power BI Data Analyst Associate</a></li>
+      <li><a href="https://achieve.snowflake.com/74243efa-626d-4c60-8fc4-e8a2eaa0a2be#acc.y0p1N5ui" target="_blank">SnowPro Core Certified – Snowflake</a></li>
+    </ul>
+  </section>
 </main>
 
 <footer>
   <p>&copy; 2025 Fayaz K. All rights reserved.</p>
   <div class="social-links">
     <a href="http://www.linkedin.com/in/fayazkf19" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" title="LinkedIn" />
     </a>
     <a href="http://www.instagram.com/_fayaz_kulumala" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" title="Instagram" />
     </a>
   </div>
 </footer>
