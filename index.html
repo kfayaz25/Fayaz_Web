@@ -6,10 +6,23 @@
   <title>Fayaz K | Data Engineer Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #003366;
+      --secondary: #005a9c;
+      --light: #f0f4f8;
+      --accent: #00c8a2;
+      --bg: linear-gradient(to right, #e0eafc, #cfdef3);
+      --card-bg: rgba(255, 255, 255, 0.9);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f5f7fa;
+      background: var(--bg);
       color: #2e2e2e;
       animation: fadeInBody 1.2s ease-in;
     }
@@ -25,72 +38,37 @@
       }
     }
 
-    section {
-      animation: fadeInSection 1s ease-in;
-    }
-
-    @keyframes fadeInSection {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    header, footer {
-      animation: slideFadeIn 0.9s ease-in;
-    }
-
-    @keyframes slideFadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
     header {
-      background-color: #d6e0f0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: var(--primary);
+      color: white;
       padding: 2rem 1rem;
-      border-bottom: 4px solid #9bb1d4;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .header-content {
-      display: flex;
-      align-items: center;
       max-width: 960px;
-      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .header-content img {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      object-fit: cover;
-      margin-right: 2rem;
-      border: 4px solid #999;
+      border: 4px solid #fff;
+      margin-bottom: 1rem;
     }
 
-    .header-text {
-      flex: 1;
+    .header-content h1 {
+      font-size: 2.5rem;
+      margin: 0.2rem 0;
     }
 
-    .header-text h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    .header-text p {
-      margin: 0.3rem 0;
+    .header-content p {
+      margin: 0.2rem 0;
     }
 
     main {
@@ -100,162 +78,162 @@
     }
 
     section {
-      margin-bottom: 2.5rem;
+      background: var(--card-bg);
+      border-radius: 10px;
       padding: 1.5rem;
-      background-color: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      animation: fadeInSection 1s ease-in;
+    }
+
+    @keyframes fadeInSection {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h2 {
-      color: #333;
-      font-size: 1.75rem;
-      margin-bottom: 0.8rem;
-      border-left: 5px solid #999;
-      padding-left: 0.5rem;
+      color: var(--secondary);
+      border-left: 5px solid var(--accent);
+      padding-left: 0.6rem;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
     }
 
     ul {
-      list-style-type: disc;
       padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
     }
 
     .education-item {
       display: flex;
-      align-items: center;
       gap: 1rem;
-      background: #f0f4f8;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
+      align-items: center;
     }
 
-    .education-item:hover {
-      transform: scale(1.02);
-    }
-
-    .edu-logo {
+    .education-item img {
       width: 60px;
-      height: auto;
-      border-radius: 4px;
     }
 
     footer {
-      background-color: #d6e0f0;
-      color: #333;
+      background: var(--primary);
+      color: white;
       text-align: center;
       padding: 1.5rem 1rem;
-      border-top: 4px solid #9bb1d4;
-    }
-
-    .social-links {
-      margin-top: 1rem;
+      margin-top: 2rem;
     }
 
     .social-links a {
-      margin: 0 10px;
+      margin: 0 0.5rem;
       display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.1);
     }
 
     .social-links img {
       width: 28px;
       height: 28px;
-      vertical-align: middle;
     }
 
     a {
-      color: #1e70bf;
+      color: var(--accent);
       text-decoration: none;
     }
   </style>
 </head>
 <body>
-
-<header>
-  <div class="header-content">
-    <img src="me1.jpg" alt="Fayaz K">
-    <div class="header-text">
+  <header>
+    <div class="header-content">
+      <img src="me1.jpg" alt="Fayaz K">
       <h1>Fayaz K</h1>
       <p>Data Engineer</p>
       <p>Email: <a href="mailto:fayazkf98@gmail.com">fayazkf98@gmail.com</a> | Phone: +1 (469) 502-3454</p>
     </div>
-  </div>
-</header>
+  </header>
 
-<main>
-  <section>
-    <h2>Summary</h2>
-    <p>
-      Experienced Data Engineer with over 5 years of hands-on expertise in building cloud-native data solutions across healthcare, telecom, and airline sectors. Specialized in ETL pipeline development, cloud data warehousing, and real-time data streaming using tools like PySpark, dbt, Snowflake, and Airflow on AWS and Azure platforms. Proficient in both batch and streaming architecture, ensuring robust data quality and automation. Adept at cross-functional collaboration to translate business goals into scalable data infrastructure. Proven ability to lead cloud migrations and performance tuning projects. Passionate about delivering actionable insights and driving efficiency.
-    </p>
-  </section>
+  <main>
+    <section>
+      <h2>Summary</h2>
+      <p>
+        Experienced Data Engineer with 5+ years of experience building scalable cloud-native solutions across healthcare, telecom, and airline industries. Expert in ETL development, real-time streaming, and data warehousing using tools like Spark, Snowflake, and Airflow across AWS and Azure. Passionate about solving business problems with data-driven strategies.
+      </p>
+    </section>
 
-  <section class="education">
-    <h2>Education</h2>
-    <div class="education-item">
-      <img src="unt.png" alt="University of North Texas Logo" class="edu-logo" />
-      <div>
-        <p><strong>Master’s Degree in Data Science</strong></p>
-        <p>University of North Texas</p>
-        <p><em>Graduated: 2024</em></p>
+    <section>
+      <h2>Education</h2>
+      <div class="education-item">
+        <img src="unt.png" alt="University of North Texas Logo" />
+        <div>
+          <p><strong>Master’s Degree in Data Science</strong></p>
+          <p>University of North Texas</p>
+          <p><em>Graduated: 2024</em></p>
+        </div>
       </div>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Big Data:</strong> Hadoop, Spark, Flink, Hive</li>
+        <li><strong>Streaming:</strong> Kafka, Flink, Beam</li>
+        <li><strong>Cloud:</strong> AWS (S3, Redshift, EMR), Azure (ADF, Synapse, Databricks), GCP (BigQuery)</li>
+        <li><strong>ETL:</strong> NiFi, Glue, ADF, Talend</li>
+        <li><strong>Databases:</strong> PostgreSQL, SQL Server, MongoDB</li>
+        <li><strong>DevOps:</strong> Jenkins, Terraform, Docker, GitHub Actions</li>
+        <li><strong>Languages:</strong> Python, SQL, Java</li>
+        <li><strong>Monitoring:</strong> Splunk, Grafana</li>
+        <li><strong>BI Tools:</strong> Power BI, Tableau</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li>Airline Data Lakehouse using Databricks & Snowflake – Boosted analytics speed by 40%.</li>
+        <li>Real-Time Claims Pipeline with Kafka + EMR – Enabled proactive fraud detection.</li>
+        <li>Healthcare DWH Migration – Delivered HIPAA-compliant and 30% faster reporting.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Achievements</h2>
+      <ul>
+        <li>Cut ETL run time by 50% at T-Mobile through Spark optimization.</li>
+        <li>Recognized at American Airlines for leading cloud data migration.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <ul>
+        <li><a href="https://learn.microsoft.com/en-us/users/fayazkulumala-1688/credentials/28942792a53e1c01" target="_blank">Azure Data Engineer Associate</a></li>
+        <li><a href="https://learn.microsoft.com/en-us/users/fayazkulumala-1688/credentials/f7d99231765f0980" target="_blank">Power BI Data Analyst Associate</a></li>
+        <li><a href="https://achieve.snowflake.com/74243efa-626d-4c60-8fc4-e8a2eaa0a2be" target="_blank">SnowPro Core Certified – Snowflake</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Fayaz K. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/fayazkf19" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+      </a>
+      <a href="https://www.instagram.com/_fayaz_kulumala" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
+      </a>
     </div>
-  </section>
-
-  <section>
-    <h2>Technical Skills</h2>
-    <ul>
-      <li><strong>Big Data:</strong> Hadoop, Spark, Flink, Hive, HBase</li>
-      <li><strong>Streaming:</strong> Kafka, Storm, Flink, Beam</li>
-      <li><strong>Cloud:</strong> AWS (S3, Redshift, EMR, Lambda), GCP (BigQuery, Dataflow), Azure (ADF, Synapse, Databricks)</li>
-      <li><strong>ETL:</strong> NiFi, Talend, Informatica, Glue, Data Factory</li>
-      <li><strong>Databases:</strong> MySQL, PostgreSQL, Oracle, SQL Server, MongoDB</li>
-      <li><strong>DevOps:</strong> Jenkins, GitHub Actions, Terraform, Docker, Kubernetes</li>
-      <li><strong>Languages:</strong> Python, SQL, Java, Scala</li>
-      <li><strong>Monitoring:</strong> Splunk, Grafana</li>
-      <li><strong>Visualization:</strong> Power BI, Tableau, Looker</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li>Cloud Data Lakehouse for Airlines using Databricks and Snowflake – Delivered 40% performance boost.</li>
-      <li>Real-Time Claims Processing Pipeline on AWS – Enabled fraud analytics with Kafka + EMR.</li>
-      <li>Healthcare Data Warehouse Migration – Achieved full HIPAA compliance and 30% faster reporting.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Achievements</h2>
-    <ul>
-      <li>Reduced ETL execution time by 50% at T-Mobile through pipeline optimization.</li>
-      <li>Received internal award for leadership in cloud migration at American Airlines.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Certifications</h2>
-    <ul>
-      <li><a href="https://learn.microsoft.com/en-us/users/fayazkulumala-1688/credentials/28942792a53e1c01?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank">Azure Data Engineer Associate</a></li>
-      <li><a href="https://learn.microsoft.com/en-us/users/fayazkulumala-1688/credentials/f7d99231765f0980?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank">Power BI Data Analyst Associate</a></li>
-      <li><a href="https://achieve.snowflake.com/74243efa-626d-4c60-8fc4-e8a2eaa0a2be#acc.y0p1N5ui" target="_blank">SnowPro Core Certified – Snowflake</a></li>
-    </ul>
-  </section>
-</main>
-
-<footer>
-  <p>&copy; 2025 Fayaz K. All rights reserved.</p>
-  <div class="social-links">
-    <a href="http://www.linkedin.com/in/fayazkf19" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" title="LinkedIn" />
-    </a>
-    <a href="http://www.instagram.com/_fayaz_kulumala" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" title="Instagram" />
-    </a>
-  </div>
-</footer>
-
+  </footer>
 </body>
 </html>
