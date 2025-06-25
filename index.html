@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fayaz K | Data Engineer Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -86,6 +86,24 @@
       color: #1e70bf;
       text-decoration: none;
     }
+    .education-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    .education-item:hover {
+      transform: scale(1.02);
+    }
+    .edu-logo {
+      width: 60px;
+      height: auto;
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
@@ -122,18 +140,17 @@
     <h2>Technical Skills</h2>
     <ul>
       <li><strong>Big Data Processing:</strong> Apache Hadoop, Apache Spark, Apache Flink, Apache Hive, Apache HBase</li>
-    <li><strong>Data Streaming:</strong> Apache Kafka, Apache Storm, Apache Beam</li>
-    <li><strong>Cloud Platforms:</strong> AWS (S3, EMR, Redshift, DynamoDB, SQS, Lambda, EC2, IAM, KMS), 
-        GCP (BigQuery, Dataflow, Pub/Sub, GCS), Azure (Data Lake, Cosmos DB, Azure Databricks, ADF, Functions)</li>
-    <li><strong>ETL & Data Integration:</strong> Apache NiFi, Talend, Informatica, AWS Glue, Azure Data Factory, Apache Flink</li>
-    <li><strong>Databases:</strong> MySQL, PostgreSQL, Oracle, SQL Server, Cassandra, MongoDB, HBase, NoSQL, Teradata, IBM DB2</li>
-    <li><strong>Data Warehousing:</strong> Amazon Redshift, Google BigQuery, Snowflake, Databricks</li>
-    <li><strong>Containerization & Orchestration:</strong> Docker, Kubernetes, Apache Airflow</li>
-    <li><strong>DevOps & CI/CD:</strong> Jenkins, GitLab CI, GitHub, Terraform, AWS CloudFormation</li>
-    <li><strong>Data Visualization:</strong> Tableau, Power BI, Looker</li>
-    <li><strong>Version Control:</strong> Git, SVN</li>
-    <li><strong>Programming:</strong> Python, SQL, Java, Scala, R, Linux/Unix</li>
-    <li><strong>Monitoring:</strong> Splunk, Grafana</li>
+      <li><strong>Data Streaming:</strong> Apache Kafka, Apache Storm, Apache Beam</li>
+      <li><strong>Cloud Platforms:</strong> AWS (S3, EMR, Redshift, DynamoDB, SQS, Lambda, EC2, IAM, KMS), GCP (BigQuery, Dataflow, Pub/Sub, GCS), Azure (Data Lake, Cosmos DB, Azure Databricks, ADF, Functions)</li>
+      <li><strong>ETL & Data Integration:</strong> Apache NiFi, Talend, Informatica, AWS Glue, Azure Data Factory, Apache Flink</li>
+      <li><strong>Databases:</strong> MySQL, PostgreSQL, Oracle, SQL Server, Cassandra, MongoDB, HBase, NoSQL, Teradata, IBM DB2</li>
+      <li><strong>Data Warehousing:</strong> Amazon Redshift, Google BigQuery, Snowflake, Databricks</li>
+      <li><strong>Containerization & Orchestration:</strong> Docker, Kubernetes, Apache Airflow</li>
+      <li><strong>DevOps & CI/CD:</strong> Jenkins, GitLab CI, GitHub, Terraform, AWS CloudFormation</li>
+      <li><strong>Data Visualization:</strong> Tableau, Power BI, Looker</li>
+      <li><strong>Version Control:</strong> Git, SVN</li>
+      <li><strong>Programming:</strong> Python, SQL, Java, Scala, R, Linux/Unix</li>
+      <li><strong>Monitoring:</strong> Splunk, Grafana</li>
     </ul>
   </section>
 
@@ -161,6 +178,18 @@
       <li><a href="https://learn.microsoft.com/en-us/users/fayazkulumala-1688/credentials/f7d99231765f0980?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank">Power BI Data Analyst Associate</a></li>
       <li><a href="https://achieve.snowflake.com/74243efa-626d-4c60-8fc4-e8a2eaa0a2be#acc.y0p1N5ui" target="_blank">SnowPro Core Certified – Snowflake</a></li>
     </ul>
+  </section>
+
+  <section class="education">
+    <h2>Education</h2>
+    <div class="education-item">
+      <img src="unt.png" alt="University of North Texas Logo" class="edu-logo" />
+      <div>
+        <p><strong>Master’s Degree in Data Science</strong></p>
+        <p>University of North Texas</p>
+        <p><em>Graduated: 2024</em></p>
+      </div>
+    </div>
   </section>
 </main>
 
