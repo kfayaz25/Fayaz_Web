@@ -2,148 +2,160 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fayaz K | Data Engineer Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Styles included directly in <style> -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f7fa;
+      color: #2e2e2e;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      border-bottom: 4px solid #b0b0b0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      animation: fadeInDown 0.9s ease-in;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      max-width: 960px;
+      width: 100%;
+    }
+
+    .header-content img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 2rem;
+      border: 4px solid #999;
+    }
+
+    .header-text {
+      flex: 1;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .header-text p {
+      margin: 0.3rem 0;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+      padding: 2rem 1.5rem;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    h2 {
+      color: #333;
+      font-size: 1.75rem;
+      margin-bottom: 0.8rem;
+      border-left: 5px solid #999;
+      padding-left: 0.5rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+
+    .education-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: #f0f4f8;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .education-item:hover {
+      transform: scale(1.02);
+    }
+
+    .edu-logo {
+      width: 60px;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    footer {
+      background-color: #e0e0e0;
+      color: #333;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border-top: 4px solid #b0b0b0;
+      animation: fadeInUp 1s ease-in;
+    }
+
+    .social-links {
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    .social-links img {
+      width: 28px;
+      height: 28px;
+      vertical-align: middle;
+    }
+
+    a {
+      color: #1e70bf;
+      text-decoration: none;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
-
-<style>
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #f5f7fa;
-    color: #2e2e2e;
-    scroll-behavior: smooth;
-  }
-
-  section {
-    margin-bottom: 2.5rem;
-    padding: 2rem 1.5rem;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    animation: fadeInUp 0.8s ease forwards;
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  header {
-    background-color: #e0e0e0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 1rem;
-    border-bottom: 4px solid #b0b0b0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-
-  .header-content {
-    display: flex;
-    align-items: center;
-    max-width: 960px;
-    width: 100%;
-  }
-
-  .header-content img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 2rem;
-    border: 4px solid #999;
-  }
-
-  .header-text {
-    flex: 1;
-  }
-
-  .header-text h1 {
-    margin: 0;
-    font-size: 2rem;
-  }
-
-  .header-text p {
-    margin: 0.3rem 0;
-  }
-
-  main {
-    max-width: 960px;
-    margin: 2rem auto;
-  }
-
-  h2 {
-    color: #333;
-    font-size: 1.75rem;
-    margin-bottom: 0.8rem;
-    border-left: 5px solid #999;
-    padding-left: 0.5rem;
-  }
-
-  ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-  }
-
-  .education-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: #f0f4f8;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-  }
-
-  .education-item:hover {
-    transform: scale(1.02);
-  }
-
-  .edu-logo {
-    width: 60px;
-    height: auto;
-    border-radius: 4px;
-  }
-
-  footer {
-    background-color: #e0e0e0;
-    color: #333;
-    text-align: center;
-    padding: 1.5rem 1rem;
-    border-top: 4px solid #b0b0b0;
-  }
-
-  .social-links {
-    margin-top: 1rem;
-  }
-
-  .social-links a {
-    margin: 0 10px;
-    display: inline-block;
-  }
-
-  .social-links img {
-    width: 28px;
-    height: 28px;
-    vertical-align: middle;
-  }
-
-  a {
-    color: #1e70bf;
-    text-decoration: none;
-  }
-</style>
 
 <header>
   <div class="header-content">
@@ -160,58 +172,12 @@
   <section>
     <h2>Summary</h2>
     <p>
-      Experienced Data Engineer with over 5 years of hands-on expertise in building cloud-native data solutions across healthcare, telecom, and airline sectors. Specialized in ETL pipeline development, cloud data warehousing, and real-time data streaming using tools like PySpark, dbt, Snowflake, and Airflow on AWS and Azure platforms.
+      Experienced Data Engineer with over 5 years of hands-on expertise in building cloud-native data solutions across healthcare, telecom, and airline sectors.
+      Specialized in ETL pipeline development, cloud data warehousing, and real-time data streaming using tools like PySpark, dbt, Snowflake, and Airflow on AWS and Azure platforms.
+      Proficient in both batch and streaming architecture, ensuring robust data quality and automation.
+      Adept at cross-functional collaboration to translate business goals into scalable data infrastructure.
+      Proven ability to lead cloud migrations and performance tuning projects. Passionate about delivering actionable insights and driving efficiency.
     </p>
-  </section>
-
-  <section>
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>American Airlines:</strong> Migrated enterprise data pipelines to Snowflake; built scalable ETL with Databricks and dbt.</li>
-      <li><strong>T-Mobile:</strong> Developed AWS-native analytics platform for fraud detection using EMR, Redshift, and Kinesis.</li>
-      <li><strong>Optum Health:</strong> Built HIPAA-compliant ETL pipelines for patient and claims data across AWS and Azure.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Technical Skills</h2>
-    <ul>
-      <li><strong>Big Data Processing:</strong> Apache Hadoop, Apache Spark, Apache Flink, Apache Hive, Apache HBase</li>
-      <li><strong>Data Streaming:</strong> Apache Kafka, Apache Storm, Apache Beam</li>
-      <li><strong>Cloud Platforms:</strong> AWS, GCP, Azure</li>
-      <li><strong>ETL & Integration:</strong> NiFi, Talend, Glue, ADF, Flink</li>
-      <li><strong>Databases:</strong> MySQL, PostgreSQL, SQL Server, MongoDB, Cassandra</li>
-      <li><strong>Data Warehousing:</strong> Redshift, BigQuery, Snowflake, Databricks</li>
-      <li><strong>CI/CD & DevOps:</strong> Jenkins, GitLab, Terraform, GitHub</li>
-      <li><strong>Visualization:</strong> Tableau, Power BI, Looker</li>
-      <li><strong>Languages:</strong> Python, SQL, Java, Scala, R</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li>Cloud Lakehouse for Airlines using Databricks + Snowflake – Boosted performance by 40%.</li>
-      <li>Real-Time Claims Processing on AWS with Kafka + EMR – Enabled fraud analytics.</li>
-      <li>Healthcare DW Migration – Achieved HIPAA compliance and reduced reporting time.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Achievements</h2>
-    <ul>
-      <li>Reduced ETL execution time by 50% at T-Mobile.</li>
-      <li>Awarded for leadership in data migration at American Airlines.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Certifications</h2>
-    <ul>
-      <li><a href="https://learn.microsoft.com/en-us/users/fayazkulumala-1688/credentials/28942792a53e1c01" target="_blank">Azure Data Engineer Associate</a></li>
-      <li><a href="https://learn.microsoft.com/en-us/users/fayazkulumala-1688/credentials/f7d99231765f0980" target="_blank">Power BI Data Analyst Associate</a></li>
-      <li><a href="https://achieve.snowflake.com/74243efa-626d-4c60-8fc4-e8a2eaa0a2be" target="_blank">SnowPro Core Certified</a></li>
-    </ul>
   </section>
 
   <section class="education">
